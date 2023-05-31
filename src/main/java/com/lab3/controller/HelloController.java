@@ -8,14 +8,14 @@ import java.util.concurrent.atomic.AtomicLong;
 @RestController
 public class HelloController {
     private final AtomicLong counter = new AtomicLong();
-    @CrossOrigin(origins = "http://localhost:4200/")
+    @CrossOrigin
     @RequestMapping("/hello")
 
     public  String index()
     {
         return "Hello, world";
     }
-    @CrossOrigin(origins = "http://localhost:4200/")
+    @CrossOrigin
     @RequestMapping("/greeting")
     /*
     * @ResponseBody注解的作用是将controller的方法返回的对象 通过适当的转换器 转换为指定的格式之后，写入到response对象的body区（响应体中），通常用来返回JSON数据或者是XML。

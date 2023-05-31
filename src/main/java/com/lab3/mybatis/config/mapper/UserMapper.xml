@@ -11,6 +11,10 @@
             resultType="com.lab3.mybatis.po.User">
         select * from User where username = #{username}
     </select>
+    <select id="findAllUser"
+            resultType="com.lab3.mybatis.po.User">
+        select * from User
+    </select>
     <insert id="addUser" parameterType="com.lab3.mybatis.po.User"
             useGeneratedKeys="true" keyProperty="userID">
         insert into User (username, password, email, phone)
